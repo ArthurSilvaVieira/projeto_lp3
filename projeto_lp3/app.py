@@ -1,5 +1,5 @@
 # importa a class Flask do módulo flask
-from flask import Flask
+from flask import Flask, render_template
 from validate_docbr import CPF, CNPJ
 cpf = CPF()
 cnpj = CNPJ()
@@ -15,17 +15,22 @@ app = Flask("Minha Aplicação")
 # página home - /
 @app.route("/")
 def home():
-    return "<h1>Home page</h1>"
+    return render_template("home.html")
 
 # página contato - /contato
 @app.route("/contato")
 def contato():
-    return "<h1>Contato</h1>"
+    return render_template("contato.html")
 
 # página produtos - /produtos
 @app.route("/produtos")
 def produtos():
-    return "<h1>Produtos</h1>"
+    lista_produtos = [
+        {"nome": "Coca-cola", "descricao":"Mata a sede"},
+        {"nome": "Doritos", "descricao":"Suja a mão"},
+        {"nome": "Chocolote", "descricao":"Bom"},
+    ]
+    return render_template("produtos.html", produtos = lista_produtos)
 
 #   página /servicos retornar "Nossos Servicos"
 @app.route("/servicos")
