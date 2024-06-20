@@ -1,0 +1,7 @@
+{% extends "base-documento.html" %}
+
+{% block title %}Termos{% endblock %}
+
+{% block content %}
+Termos de Uso
+{% endblock %}

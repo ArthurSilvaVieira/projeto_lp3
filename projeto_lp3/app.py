@@ -40,11 +40,28 @@ def nossos_servicos():
 #   página /gerar-cpf retornar CPF aleatório
 @app.route("/gerar-cpf")
 def gerar_cpf():
-    return f"CPF: {cpf.generate(True)}"
+    cpf_gerado = cpf.generate(True)
+    return render_template("cpf.html", cpf_gerado = cpf_gerado)
+
 
 #   página /gerar-cpf retornar CPF aleatório
 @app.route("/gerar-cnpj")
 def gerar_cnpj():
-    return f"CPF: {cnpj.generate(True)}"
+    cnpj_gerado = cnpj.generate(True)
+    return render_template("cnpj.html", cnpj_gerado = cnpj_gerado)
+
+#   página politicas de privacidade - /politicas-de-privacidade
+@app.route("/politicas-de-privacidade")
+def politica_privacidade():
+    return render_template("politica-privacidade.html")
+
+@app.route("/como-utilizar")
+def como_utilizar():
+    return render_template("como-utilizar")
+
+@app.route("/termos-de-uso")
+def termos_de_uso():
+    return render_template("termos-de-uso.html")
+
 
 app.run()
