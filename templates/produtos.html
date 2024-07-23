@@ -8,6 +8,7 @@
 <p>Confira os produtos</p>
 
 {% for produto in produtos %}
+<img src ={{produto.imagem}} width="500px">
 <h2>{{produto.nome}}</h2>
 <p>{{produto.descricao}}</p>
 {% endfor %}

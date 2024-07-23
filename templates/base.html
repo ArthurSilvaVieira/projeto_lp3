@@ -6,18 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
 </head>
-<body>
+<body style = "text-align: center">
     <nav>
-        <a href="/">Home Page</a>
-        <a href="/contato">Contato</a>
-        <a href="/produtos">Produtos</a>
+        <a href="/">Home Page&nbsp;</a>
+        <a href="/contato">Contato&nbsp;</a>
+        <a href="/produtos">Produtos&nbsp;</a>
     </nav>
-
+    <br>
     {% block content %}
     {% endblock %}
+    <br>
     
     <footer>
+        <hr>
         <p>Desenvolvido por Arthur</p>
+        <nav>
+            <a href="/termos-de-uso">Termos de Uso&nbsp;</a>
+            <a href="/politicas-de-privacidade">Politicas de Privacidade&nbsp;</a>
+            <a href="/como-utilizar">Como Utilizar&nbsp;</a>
+        </nav>
     </footer>
 </body>
 </html>

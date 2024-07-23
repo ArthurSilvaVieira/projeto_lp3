@@ -26,9 +26,9 @@ def contato():
 @app.route("/produtos")
 def produtos():
     lista_produtos = [
-        {"nome": "Coca-cola", "descricao":"Mata a sede"},
-        {"nome": "Doritos", "descricao":"Suja a mão"},
-        {"nome": "Chocolote", "descricao":"Bom"},
+        {"nome": "Jacaré de Papo Amarelo", "descricao":"Pet médio, filhote", "imagem": "https://agorarn.com.br/files/uploads/2022/04/get-3-e1650037372308.jpg"},
+        {"nome": "Jacaré Açu", "descricao":"Pet grande, filhote", "imagem": "https://c8.alamy.com/comp/MBYKBT/a-baby-caiman-caught-and-presented-by-a-keeper-in-the-amazon-rainforest-tambopata-national-reserve-puerto-maldonado-peru-MBYKBT.jpg"},
+        {"nome": "Jacaretinga", "descricao":"Pet pequeno, filhote", "imagem": "https://www.mundoecologia.com.br/wp-content/uploads/2019/08/Filhote-de-Jacaretinga.jpg"},
     ]
     return render_template("produtos.html", produtos = lista_produtos)
 
